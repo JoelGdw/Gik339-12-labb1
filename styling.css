@@ -1,0 +1,32 @@
+
+
+body {
+    background-color: darkslategrey;
+    /* padding-top: 300px; */
+}
+
+header {
+    /* align-items: center; */
+    padding-bottom: 40px;
+}
+
+.container {
+    background-color: lightgray;
+    width: 500px;
+    height: 200px;
+    align-items: center;
+    /* justify-content: center;  */
+}
+button {
+    width: 20%;
+    box-shadow: 0 4px gray;
+}
+button:hover{
+    background-color: lightskyblue;
+}
+button:active {
+    transform: translateY(3px);
+    box-shadow:  0 3px darkgray;
+
+}
+
