@@ -37,11 +37,10 @@ saving.addEventListener('click', handleclick);
 
 
 divStyle.forEach(checkbox => checkbox.addEventListener('change', function(e) {
-    const targetName = e.target.name
-    if (checkbox.checked) {
-    colorInput = e.target.value;
-
+    if(checkbox.checked){
+     colorCheck = textfields[0].value 
+     emptyDiv.style.background = colorCheck;
+     emptyDiv.innerHTML = colorCheck;
     }
-//.insertAdjacentElement("beforeend", )
-    
-}));
+}
+));
