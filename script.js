@@ -14,13 +14,14 @@ emptyDiv.style.visibility = 'hidden';
 
 function inputInfo(e) {
     
-    console.log('User: ', e.target);
+    console.log('textfield used: ', e.target.name);
     const targetName = e.target.name;
     if (targetName === 'content') {
         const inputValue = e.target.value;
         emptyDiv.innerHTML = inputValue;
         emptyDiv.style.visibility = 'visible';
-    }
+
+    }  
 };
 
 for (let i = 0; i < textfields.length; i++) {
