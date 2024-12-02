@@ -10,6 +10,7 @@ console.log(saving)
 const emptyDiv = document.getElementById('emptyDiv')
 console.log(emptyDiv)
 
+emptyDiv.style.visibility = 'hidden';
 
 function inputInfo(e) {
     
@@ -18,15 +19,12 @@ function inputInfo(e) {
     if (targetName === 'content') {
         const inputValue = e.target.value;
         emptyDiv.innerHTML = inputValue;
-    } else if (targetName === 'Color') { 
-        const colorInput = e.target.value;
-        emptyDiv.style.background = colorInput;
-        emptyDiv.innerHTML = colorInput;
-    } 
+        emptyDiv.style.visibility = 'visible';
+    }
 };
 
 for (let i = 0; i < textfields.length; i++) {
-    textfields[1].addEventListener('blur', inputInfo)
+    textfields[i].addEventListener('blur', inputInfo)
 }
 
 function handleclick(e){
@@ -41,6 +39,9 @@ divStyle.forEach(checkbox => checkbox.addEventListener('change', function(e) {
      colorCheck = textfields[0].value 
      emptyDiv.style.background = colorCheck;
      emptyDiv.innerHTML = colorCheck;
+     emptyDiv.style.visibility = 'visible';
+    } else {
+        emptyDiv.style.visibility = 'hidden';
     }
 }
 ));
